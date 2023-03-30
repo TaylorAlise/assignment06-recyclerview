@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.ualr.recyclerviewassignment"
-        minSdkVersion 16
+        minSdkVersion 20
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -29,10 +29,6 @@ android {
         dataBinding true
     }
     namespace 'com.ualr.recyclerviewassignment'
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_16
-        targetCompatibility JavaVersion.VERSION_16
-    }
 
 }
 

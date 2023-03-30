@@ -78,7 +78,7 @@ public class AdapterListBasic extends RecyclerView.Adapter {
             });
         }
 
-        private OnItemClickListener mOnItemClickListener;
+        /*private OnItemClickListener mOnItemClickListener;
 
         public interface OnItemClickListener {
             void onItemClick(View view, Inbox obj, int position);
@@ -86,7 +86,9 @@ public class AdapterListBasic extends RecyclerView.Adapter {
 
         public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
             this.mOnItemClickListener = mItemClickListener;
-        }
+        }*/
+
+
     }
 
 
