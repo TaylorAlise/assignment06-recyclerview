@@ -1,6 +1,9 @@
 package com.ualr.recyclerviewassignment;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,9 +30,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_list_multi_selection);
         initComponent();
         initRecyclerView();
+
+        List<Inbox> items = DataGenerator.getInboxData(this);
+        items.addAll(DataGenerator.getInboxData(this));
+        items.addAll(DataGenerator.getInboxData(this));
+        mAdapter = new AdapterListBasic(this, items);
+
+        mAdapter.setOnItemClickListener(new AdapterListBasic.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, Inbox obj, int position) {
+                Log.d(TAG, String.format("The user has tapped on %s", obj.getFrom()));
+            }
+        });
+
 
 
 
@@ -48,13 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAdapter = new AdapterListBasic(this, items);
         recyclerView.setAdapter(mAdapter);
-        /*mAdapter.setOnItemClickListener(new AdapterListBasic.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, Inbox obj, int position) {
-                Log.d(TAG, String.format())
-            }
-        }))
-         */
+
     }
 
 

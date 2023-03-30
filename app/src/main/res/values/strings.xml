@@ -6,19 +6,8 @@
     </string>
 
     <string name="item1Name">Anderson Thomas</string>
-    <string name="item1Email">anderson.thomas@mail.com</string>
     <string name="item1Date">01 Dec 2015</string>
+    <string name="item1Email">andereson.thomas@mail.com</string>
 
-    <string-array name="senders_names">
-        <item name="name_item1">Anderson Thomas</item>
-        <item name="name_item2">Betty L</item>
-        <item name="name_item3">Mary Jackson</item>
-    </string-array>
-
-    <string-array name="senders_emails">
-        <item name="email_item1">anderson.thomas@mail.com</item>
-        <item name="email_item2">betty.l@mail.com</item>
-        <item name="email_item3">mary.jackson@mail.com</item>
-    </string-array>
 
 </resources>

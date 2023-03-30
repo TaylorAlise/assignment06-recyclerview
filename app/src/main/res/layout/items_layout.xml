@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/lyt_parent">
 
     <ImageView
@@ -16,6 +16,17 @@
         android:layout_marginTop="@dimen/spacing_xlarge"
         app:srcCompat="@drawable/shape_circle"
         android:paddingTop="3dp"/>
+
+    <TextView
+        android:id="@+id/initial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:background="@drawable/shape_circle"
+        android:textColor="@color/overlay_light_90"
+        android:layout_marginTop="@dimen/spacing_xxlarge"
+        android:layout_marginStart="@dimen/spacing_xlarge"
+        android:text="A" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -39,6 +50,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryLight"
             android:layout_marginTop="@dimen/spacing_small"
             android:layout_marginEnd="@dimen/spacing_small"
             android:text="@string/item1Date" />
@@ -47,6 +60,8 @@
             android:id="@+id/name"
             android:layout_width="216dp"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/overlay_dark_90"
             android:layout_marginStart="@dimen/spacing_xxxxxlarge"
             android:layout_marginTop="@dimen/spacing_large"
             android:text="@string/item1Name" />
@@ -55,6 +70,8 @@
             android:id="@+id/email"
             android:layout_width="216dp"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/overlay_dark_90"
             android:layout_marginStart="@dimen/spacing_xxxxxlarge"
             android:layout_marginTop="@dimen/spacing_middle"
             android:text="@string/item1Email" />

@@ -46,15 +46,20 @@ public class AdapterListBasic extends RecyclerView.Adapter {
         viewHolder.name.setText(p.getFrom());
         viewHolder.email.setText(p.getEmail());
         viewHolder.date.setText(p.getDate());
+        viewHolder.initial.setText(p.getInitial());
         //Tools.displayImageRound(mContext, viewHolder, image, p.getImage());
+        /*private void getNameInitials {
+            return p.getFrom[0].toUpperCase().toString();
+        }*/
     }
 
     @Override
     public int getItemCount() { return this.mItems.size(); }
 
 
-    public class PersonViewHolder extends RecyclerView.ViewHolder {
+    public static class PersonViewHolder extends RecyclerView.ViewHolder {
         public ImageView image;
+        public TextView initial;
         public TextView name;
         public TextView email;
         public TextView date;
@@ -67,18 +72,19 @@ public class AdapterListBasic extends RecyclerView.Adapter {
             name = v.findViewById(R.id.name);
             email = v.findViewById(R.id.email);
             date = v.findViewById(R.id.date);
+            initial = v.findViewById(R.id.initial);
             lyt_parent = v.findViewById(R.id.lyt_parent);
 
 
             lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                mOnItemClickListener.onItemClick(view, mItems.get(getLayoutPosition()), getLayoutPosition());
                 }
             });
         }
 
-        /*private OnItemClickListener mOnItemClickListener;
+        private OnItemClickListener mOnItemClickListener;
 
         public interface OnItemClickListener {
             void onItemClick(View view, Inbox obj, int position);
@@ -86,7 +92,7 @@ public class AdapterListBasic extends RecyclerView.Adapter {
 
         public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
             this.mOnItemClickListener = mItemClickListener;
-        }*/
+        }
 
 
     }

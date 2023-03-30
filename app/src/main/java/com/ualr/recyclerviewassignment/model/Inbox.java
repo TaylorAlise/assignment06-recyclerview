@@ -7,6 +7,8 @@ public class Inbox {
     private String date;
     private boolean selected;
 
+    private String initial;
+
     public Inbox() {
         this.selected = false;
     }
@@ -53,5 +55,13 @@ public class Inbox {
 
     public void toggleSelection() {
         this.selected = !this.selected;
+    }
+
+    public String getInitial() {
+        return initial;
+    }
+
+    public void setInitial(String initial) {
+        this.initial = initial;
     }
 }
